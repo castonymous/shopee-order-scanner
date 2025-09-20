@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Shopee Order Scanner",
+  "description": "Scan and copy Shopee order data from Seller Webchat.",
+  "version": "1.0.0",
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://seller.shopee.co.id/new-webchat/conversations*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://seller.shopee.co.id/new-webchat/conversations*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
